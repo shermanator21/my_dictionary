@@ -1,11 +1,12 @@
+# coding: utf-8
 # 1) print out the value for the key 'history' using the dictionary below
 
 
-sampleDict = { 
-   "class":{ 
-      "student":{ 
+sampleDict = {
+   "class":{
+      "student":{
          "name":"Mike",
-         "marks":{ 
+         "marks":{
             "physics":70,
             "history":80
          }
@@ -13,19 +14,18 @@ sampleDict = {
    }
 }
 
-
+print(sampleDict["class"]["student"]["marks"]["history"])
 
 
 # 2) Add 2 inches to the son's height.
 
 dict={"son's name": "Lucas", "son's eyes": "green", "son's height": 32, "son's weight": 25}
 
-
+dict["son's height"] = dict["son's height"] + 2
 
 
 
 # 3) Given a Python dictionary, Change Brad’s salary to 8500
-
 sampleDict = {
      'emp1': {'name': 'Jhon', 'salary': 7500},
      'emp2': {'name': 'Emma', 'salary': 8000},
