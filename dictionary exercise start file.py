@@ -2,7 +2,7 @@
 
 def main():
     # Create a deck of cards.
-   
+   create_deck()
 
     # Get the number of cards to deal.
     num_cards = int(input('How many cards should I deal? '))
@@ -45,6 +45,7 @@ def create_deck():
             'Queen of Diamonds':10, 'King of Diamonds': 10}
 
     # Return the deck.
+    return deck
 
 
 
@@ -55,17 +56,19 @@ def create_deck():
 def deal_cards(deck, number):
     # Initialize an accumulator for the hand value.
 
-    
+    i=0
     
 
     # Make sure the number of cards to deal is not
     # greater than the number of cards in the deck.
 
-    
+    if i > 52:
+        print("You are requesting too many cards.")
+
     
 
     # Deal the cards and accumulate their values.
-    
+    card1 = rand
 
 
     
