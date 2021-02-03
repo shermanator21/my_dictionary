@@ -74,6 +74,7 @@ def deal_cards(deck, number):
 
         hand_value += value 
         del deck[card]
+        
 
     # Display the value of the hand.
     print("The total value of the hand is ", hand_value)
