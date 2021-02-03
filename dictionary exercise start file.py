@@ -2,7 +2,7 @@
 
 def main():
     # Create a deck of cards.
-   create_deck()
+    deck = create_deck()
 
     # Get the number of cards to deal.
     num_cards = int(input('How many cards should I deal? '))
@@ -10,7 +10,7 @@ def main():
 
 
     # Deal the cards.
-
+    deal_cards(deck, num_cards)
 
     
     
