@@ -1,5 +1,3 @@
-
-
 def main():
 
     #create empty lists and dictionaries
@@ -19,8 +17,6 @@ def main():
         teamNames.append(line)
         line = winnersText.readline()
         line = line.rstrip()
-
-    winnersText.close()
 
     #team wins dictionary
         #establish keys
@@ -46,12 +42,17 @@ def main():
             year += 1
 
     #user input and display
-    year = input("Please enter a year between 1903 and 2009")
+    year = input("Please enter a year between 1903 and 2009: ")
 
-    if year in range (1903,2009):
-        print("In " + str(year) + ", the " + yearWin[year] + " won. This team has won " + str(teamWins[yearWin[year]]) + " World Series.")
+    while year > 2009 or year < 1903:
+        year = input("Year is out of range. Please enter a year within 1903 and 2009: ")
+
+    if year != 1904 and year != 1994:
+        print("In " + str(year) + ", the " + str(yearWin[year]) + " won. This team has won " + str(teamWins[yearWin[year]]) + " World Series.")
     else:
-        while year > 2009 or year < 1903:
-            input("Please enter a year within 1903 and 2009")
+        print("The World Series was not played in " + str(year))
     
+    #close file
+    winnersText.close()
+  
 main()
