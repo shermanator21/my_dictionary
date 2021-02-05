@@ -49,7 +49,7 @@ def main():
     year = input("Please enter a year between 1903 and 2009")
 
     if year in range (1903,2009):
-        print("In ", year, ", the ", yearWin[year], " won. This team had won ", teamWins[year], " World Series.")
+        print("In " + str(year) + ", the " + yearWin[year] + " won. This team has won " + str(teamWins[yearWin[year]]) + " World Series.")
     else:
         while year > 2009 or year < 1903:
             input("Please enter a year within 1903 and 2009")
