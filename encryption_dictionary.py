@@ -26,7 +26,7 @@ def main():
         "l": "a",
         "M": "s",
         "m": "d",
-        "N": "d",
+        "N": "R",
         "n": "f",
         "O": "g",
         "o": "h",
@@ -52,10 +52,21 @@ def main():
         "y": ";",
         "Z": "|",
         "z": "[",
+        " ": "H",
+        ".": "P",
+        ":": "Q",
     }
 
-    # test the code
-    print(codes["P"])
+    infile = open("info_security.txt", "r")
+    outfile = open("encrypted_info_security.txt", "w")
+
+    line = infile.readline()
+
+    for i in line:
+        outfile.write(codes[i])
+
+    infile.close()
+    outfile.close()
 
 
 main()
