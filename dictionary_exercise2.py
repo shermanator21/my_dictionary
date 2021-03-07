@@ -41,13 +41,15 @@ def main():
             yearWin[year] = name
             year += 1
 
+    print (yearWin)
+
     #user input and display
     year = input("Please enter a year between 1903 and 2009: ")
 
-    while year > 2009 or year < 1903:
+    while int(year) > 2009 or int(year) < 1903:
         year = input("Year is out of range. Please enter a year within 1903 and 2009: ")
 
-    if year != 1904 and year != 1994:
+    if int(year) != 1904 and int(year) != 1994:
         print("In " + str(year) + ", the " + str(yearWin[year]) + " won. This team has won " + str(teamWins[yearWin[year]]) + " World Series.")
     else:
         print("The World Series was not played in " + str(year))
